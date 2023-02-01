@@ -1,7 +1,7 @@
 # Django-Postgres
 
 Example demonstrating use of django with postgres DB. Also includes evnironment setup. Wrapped up with docker support.
-Also included are the definition of own manage.py commands and some simple test cases.
+Also included are the definition of own manage.py commands, some simple test cases and usage of many-to-many (MTM) model fields.
 
 # Setup
 
@@ -14,6 +14,7 @@ pip install psycopg2-binary (for macos, otherwise: pip install psycopg2)
 # Further Reading
 - https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8
 - https://learndjango.com/tutorials/django-docker-and-postgresql-tutorial
+- https://docs.djangoproject.com/en/4.1/topics/db/examples/many_to_many/
 
 # TODO:
 
@@ -121,4 +122,12 @@ docker-compose down --volumes
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose down
+```
+
+
+# MTM
+
+Note that MTM fields return a queryset. To get subject of a teacher, do
+```
+Teacher.objects.filter(name="Niels Bohr")[0].subject.all()[0]
 ```
