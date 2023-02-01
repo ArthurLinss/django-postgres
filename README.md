@@ -1,7 +1,7 @@
 # Django-Postgres
 
 Example demonstrating use of django with postgres DB. Also includes evnironment setup. Wrapped up with docker support.
-
+Also included are the definition of own manage.py commands and some simple test cases.
 
 # Setup
 
@@ -37,6 +37,7 @@ Dev:
 ```
 touch .env
 python manage.py check
+python manage.py test
 python manage.py migrate
 python manage.py makemigrations
 python manage.py runserver
