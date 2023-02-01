@@ -110,7 +110,8 @@ DATABASES = {
         'NAME': "dbtest",
         'USER': "postgres",
         'PASSWORD': "passwort",
-        'HOST': "db", #lcoalhos
+        #'HOST': "db", # for docker
+        'HOST' : 'localhost', # for local
         'PORT': "5432",
     }
 }
