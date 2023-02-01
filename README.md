@@ -15,6 +15,10 @@ pip install psycopg2-binary (for macos, otherwise: pip install psycopg2)
 - https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8
 - https://learndjango.com/tutorials/django-docker-and-postgresql-tutorial
 
+# TODO:
+
+- fix env settings for postgresql database (for production)
+
 # Commands
 
 Setup:
