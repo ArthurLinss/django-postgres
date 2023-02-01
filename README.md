@@ -18,6 +18,8 @@ pip install psycopg2-binary (for macos, otherwise: pip install psycopg2)
 # TODO:
 
 - fix env settings for postgresql database (for production)
+- adding auto-tests
+- add api maybe
 
 # Commands
 
