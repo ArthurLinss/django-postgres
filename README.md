@@ -22,12 +22,30 @@ source venv/bin/activate
 django-admin startproject blabla
 cd blabla
 django-admin startapp bla
+(deactivate)
 ```
+
 Dev:
 ```
 python manage.py check
 python manage.py migrate
 python manage.py makemigrations
+python manage.py runserver
+```
+
+Git:
+```
+git init
+touch .gitignore
+touch README.md
+git status
+git add .
+git status
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/exitfromparadise/django-postgres.git
+git remote --v
+git push -u origin main
 ```
 
 # Postgres
