@@ -30,9 +30,9 @@ SECRET_KEY = env("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1","0.0.0.0","localhost","*"]
 
 
 # Application definition
@@ -89,6 +89,9 @@ DATABASES = {
     }
 }
 """
+
+
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -97,6 +100,18 @@ DATABASES = {
         'PASSWORD': env("DB_PASSWORD"),
         'HOST': env("DB_HOST"),
         'PORT': env("DB_PORT"),
+    }
+}
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': "dbtest",
+        'USER': "postgres",
+        'PASSWORD': "passwort",
+        'HOST': "db", #lcoalhos
+        'PORT': "5432",
     }
 }
 
