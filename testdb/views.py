@@ -25,3 +25,13 @@ def create_book(request, pk):
     }
 
     return render(request, "create_book.html", context=context)
+
+
+def htmx_test(request):
+    context = {}
+    return render(request, "htmx-test.html", context=context)
+
+
+def htmx_test_clicked(request):
+    context = {}
+    return render(request, "htmx-test-clicked.html", context=context)
