@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %} Home {% endblock title %} {% block content %}
+<div>
+  <h1>Create books for {{author.name}}</h1>
+
+  <form method="POST">
+    {% csrf_token %}
+
+    {{ formset.management_form }}
+
+    {{ formset.as_p }}
+    <button> Submit </button>
+
+  </form>
+
+
+</div>
+{% endblock content %}

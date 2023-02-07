@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -10,27 +10,23 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'testdb/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'testdb/style.css' %}" />
 
 <html>
-<head>
+  <head>
     <title>{% block title %} My amazing site {% endblock %}</title>
-</head>
+  </head>
 
+  <body>
+    <div id="sidebar">
+      {% block sidebar %}
+      <ul>
+        <li><a href="/home/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      {% endblock %}
+    </div>
 
-    <body>
-        <div id="sidebar">
-            {% block sidebar %}
-            <ul>
-                <li><a href="/home/">Home</a></li>
-                <li><a href="/blog/">Blog</a></li>
-            </ul>
-            {% endblock %}
-        </div>
-
-        <div id="content">
-            {% block content %}{% endblock %}
-        </div>
-
-    </body>
+    <div id="content">{% block content %}{% endblock %}</div>
+  </body>
 </html>
