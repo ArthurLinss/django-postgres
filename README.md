@@ -1,7 +1,7 @@
 # Django-Postgres
 
 Example demonstrating use of django with postgres DB. Also includes evnironment setup. Wrapped up with docker support.
-Also included are the definition of own manage.py commands, some simple test cases, forms and usage of many-to-many (MTM) model fields.
+Also included are the definition of own manage.py commands, some simple test cases, forms and usage of many-to-many (MTM) model fields. Also added demonstration of htmx in django templates.
 
 # Setup
 
@@ -131,4 +131,18 @@ docker-compose down
 Note that MTM fields return a queryset. To get subject of a teacher, do
 ```
 Teacher.objects.filter(name="Niels Bohr")[0].subject.all()[0]
+```
+
+# HTMX
+```
+<script src="https://unpkg.com/htmx.org@1.8.5"></script>
+<!-- have a button POST a click via AJAX -->
+
+
+<body>
+<script>
+    document.body.addEventListener("htmx:configRequest", (event) => {
+        event.detail.headers['X-CSRFToken'] = "{{ csrf_token }}";
+    }) 
+</script>
 ```
