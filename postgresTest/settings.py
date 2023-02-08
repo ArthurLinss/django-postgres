@@ -38,6 +38,8 @@ ALLOWED_HOSTS = ["127.0.0.1","0.0.0.0","localhost","*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "crispy_forms",
+    "crispy_tailwind",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
