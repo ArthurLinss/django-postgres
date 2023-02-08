@@ -1,7 +1,13 @@
 # Django-Postgres
 
-Example demonstrating use of django with postgres DB. Also includes evnironment setup. Wrapped up with docker support.
-Also included are the definition of own manage.py commands, some simple test cases, forms and usage of many-to-many (MTM) model fields. Also added demonstration of htmx in django templates.
+This django example demonstrates the following tools and technologies:
+- postgreSQL DB
+- docker resp. docker-compose support
+- HTMX in django templates
+- environment variables (settings)
+- self-defined management commands
+- simple test cases
+- many to many field usage
 
 # Setup
 
@@ -147,4 +153,22 @@ Teacher.objects.filter(name="Niels Bohr")[0].subject.all()[0]
         event.detail.headers['X-CSRFToken'] = "{{ csrf_token }}";
     }) 
 </script>
+```
+
+
+# TODO
+
+Currently, manually setting name for "HOST" in settings.py is needed between switchting from local run to local docker run:
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': "dbtest",
+        'USER': "postgres",
+        'PASSWORD': "passwort",
+        #'HOST': "db", # for docker
+        'HOST' : 'localhost', # for local run
+        'PORT': "5432",
+    }
+}
 ```

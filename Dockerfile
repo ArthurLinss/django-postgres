@@ -14,6 +14,7 @@ RUN pip install --upgrade pip
 RUN pip install django
 RUN pip install django-environ
 RUN pip install psycopg2-binary
+RUN pip install django-crispy-forms crispy-tailwind
 
 # Copy project
 COPY . .

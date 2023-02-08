@@ -115,7 +115,7 @@ DATABASES = {
         'USER': "postgres",
         'PASSWORD': "passwort",
         #'HOST': "db", # for docker
-        'HOST' : 'localhost', # for local
+        'HOST' : 'localhost', # for local run
         'PORT': "5432",
     }
 }
