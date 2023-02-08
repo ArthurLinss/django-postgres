@@ -24,6 +24,7 @@ pip install django-crispy-forms crispy-tailwind
 - https://docs.djangoproject.com/en/4.1/topics/db/examples/many_to_many/
 - HTMX: https://www.youtube.com/watch?v=KVq_DjIfnBo&list=WL&index=1&ab_channel=JustDjango
 - HTMX tutorial: https://justdjango.com/blog/dynamic-forms-in-django-htmx
+- HTMX docs: https://htmx.org/docs/
 
 # TODO:
 
